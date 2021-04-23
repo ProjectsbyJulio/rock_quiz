@@ -1,7 +1,7 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.example.rock_quiz">
    <application
-        android:label="rock_quiz"
+        android:label="Rock Quiz"
         android:icon="@mipmap/ic_launcher">
         <activity
             android:name=".MainActivity"
