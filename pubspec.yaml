@@ -25,8 +25,9 @@ flutter:
   #splash screen, quiz presentation
   assets:
     - assets/img/
+    - assets/
   #Raleway import
   fonts:
     - family: 'Raleway'
       fonts:
-        - asset: assets/fonts/Raleway/Raleway-VariableFont_wght.ttf
+        - asset: assets/fonts/Raleway/Raleway-Medium.ttf

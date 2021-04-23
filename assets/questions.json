@@ -1,0 +1,41 @@
+[{
+    "1": "¿Qué álbum de rock clásico a veces se dice que es la banda sonora de El mago de Oz?",
+    "2": "¿A qué atribuyó el vocalista de Queen Freddie Mercury su rango vocal mejorado?",
+    "3": "¿A qué cantante principal de la banda se le atribuye la popularización del buceo en el escenario?",
+    "4": "¿Quién es el único miembro de ZZ Top que no tiene barba?",
+    "5": "¿Qué Beatle cruzó Abbey Road descalzo?"
+},
+{
+    "1": {
+        "a":"Abbey Road",
+        "b":"The Dark Side Of The Moon",
+        "c":"Houses Of The Holy"
+    },
+    "2": {
+        "a":"Dientes extra",
+        "b":"Mucha practica",
+        "c":"Genetica"
+    },
+    "3": {
+        "a":"The Kinks",
+        "b":"The Who",
+        "c":"The Stooges"
+    },
+    "4": {
+        "a":"Frank Beard",
+        "b":"Todos tenian barba",
+        "c":"Dusty Hill"
+    },
+    "5": {
+        "a":"John",
+        "b":"Paul",
+        "c":"Ringo"
+    }
+},
+{
+    "1": "The Dark Side Of The Moon",
+    "2": "Dientes extra",
+    "3": "The Stooges",
+    "4": "Frank Beard",
+    "5": "Paul"
+}]
