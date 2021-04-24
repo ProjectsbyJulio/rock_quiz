@@ -8,6 +8,7 @@ class SplashScreen extends StatefulWidget {
 }
 
 class _SplashScreenState extends State<SplashScreen> {
+
   @override
   void initState() {
     super.initState();
@@ -21,12 +22,12 @@ class _SplashScreenState extends State<SplashScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.indigo,
+      backgroundColor: Colors.blueGrey[900],
       body: Center(
           child: Text(
         "Rock Quiz",
         style: TextStyle(
-            fontSize: 60.0, color: Colors.white, fontFamily: "Raleway"),
+            fontSize: 60.0, color: Colors.white, fontFamily: "Poppins500"),
         textAlign: TextAlign.center,
       )),
     );
