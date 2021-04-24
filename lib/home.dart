@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutter/services.dart';
-import 'package:rock_quiz/quizpage.dart';
+import 'package:rock_quiz/quizPage.dart';
 
 class HomePage extends StatefulWidget {
   @override
@@ -11,7 +10,7 @@ class _HomePageState extends State<HomePage> {
   @override
   Widget card() {
     return Padding(
-        padding: EdgeInsets.symmetric(vertical: 60, horizontal: 30),
+        padding: EdgeInsets.symmetric(vertical: 150, horizontal: 30),
         child: InkWell(
           onTap: () {
             Navigator.of(context).pushReplacement(MaterialPageRoute(
@@ -19,15 +18,15 @@ class _HomePageState extends State<HomePage> {
             ));
           },
           child: Material(
-            color: Colors.indigoAccent,
-            elevation: 10.0,
+            color: Colors.blueGrey[800],
+            elevation: 0,
             borderRadius: BorderRadius.circular(25.0),
             child: Container(
               child: Column(
                 children: <Widget>[
                   Padding(
                     padding: EdgeInsets.symmetric(
-                      vertical: 35.0,
+                      vertical:40.0,
                     ),
                     child: Material(
                       elevation: 5.0,
@@ -53,8 +52,7 @@ class _HomePageState extends State<HomePage> {
                       style: TextStyle(
                         fontSize: 35.0,
                         color: Colors.white,
-                        fontFamily: "Raleway",
-                        fontWeight: FontWeight.w800,
+                        fontFamily: "Poppins400",
                       ),
                     ),
                   ),
@@ -65,8 +63,7 @@ class _HomePageState extends State<HomePage> {
                       style: TextStyle(
                           fontSize: 19.0,
                           color: Colors.white,
-                          fontFamily: "Raleway",
-                          fontWeight: FontWeight.w700),
+                          fontFamily: "Poppins300"),
                       maxLines: 5,
                       textAlign: TextAlign.center,
                     ),
@@ -80,16 +77,12 @@ class _HomePageState extends State<HomePage> {
 
   @override
   Widget build(BuildContext context) {
+
     return Scaffold(
-      appBar: AppBar(
-        title: Text(
-          "Rock Quiz",
-          style: TextStyle(fontFamily: "Raleway", fontWeight: FontWeight.bold),
-        ),
-      ),
       body: ListView(
         children: <Widget>[card()],
       ),
+      backgroundColor: Colors.blueGrey[900],
     );
   }
 }
