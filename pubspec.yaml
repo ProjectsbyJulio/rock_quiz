@@ -28,6 +28,15 @@ flutter:
     - assets/
   #Raleway import
   fonts:
-    - family: 'Raleway'
+    - family: 'Poppins300'
       fonts:
-        - asset: assets/fonts/Raleway/Raleway-Medium.ttf
+        - asset: assets/fonts/Poppins-Light.ttf
+    - family: 'Poppins400'
+      fonts:
+        - asset: assets/fonts/Poppins-Regular.ttf
+    - family: 'Poppins500'
+      fonts:
+        - asset: assets/fonts/Poppins-Medium.ttf
+    - family: 'Poppins600'
+      fonts:
+        - asset: assets/fonts/Poppins-SemiBold.ttf
