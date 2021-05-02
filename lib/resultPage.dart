@@ -20,15 +20,11 @@ class _ResultPageState extends State<ResultPage> {
 
   @override
   void initState() {
-    if (marks < 10) {
-      img = images[2];
-
+    if (marks <= 10) {
       message = "Debes intentarlo con más dedicación :(\nTu puntaje $marks";
-    } else if (marks < 15) {
-      img = images[1];
+    } else if (marks <= 15) {
       message = "Puedes hacerlo mejor!\nTu puntaje $marks";
     } else {
-      img = images[0];
       message = "Felicitaciones!!\nTu puntaje $marks";
     }
     super.initState();

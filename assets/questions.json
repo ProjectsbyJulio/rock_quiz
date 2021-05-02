@@ -1,41 +1,67 @@
-[{
+[
+  {
     "1": "¿Qué álbum de rock clásico a veces se dice que es la banda sonora de El mago de Oz?",
-    "2": "¿A qué atribuyó el vocalista de Queen Freddie Mercury su rango vocal mejorado?",
+    "2": "¿Quién echó una vez a Jimi Hendrix de su banda?",
     "3": "¿A qué cantante principal de la banda se le atribuye la popularización del buceo en el escenario?",
-    "4": "¿Quién es el único miembro de ZZ Top que no tiene barba?",
+    "4": "¿Qué banda obtuvo su nombre tomando la primera letra del nombre de cada miembro de la banda?",
     "5": "¿Qué Beatle cruzó Abbey Road descalzo?"
-},
-{
+  },
+  {
     "1": {
-        "a":"Abbey Road",
-        "b":"The Dark Side Of The Moon",
-        "c":"Houses Of The Holy"
+      "a": "Abbey Road",
+      "b": "The Dark Side Of The Moon",
+      "c": "Houses Of The Holy",
+      "d": "Exile on Main st"
     },
     "2": {
-        "a":"Dientes extra",
-        "b":"Mucha practica",
-        "c":"Genetica"
+      "a": "Mick Jagger",
+      "b": "Chuck Berry",
+      "c": "Little Richard",
+      "d": "Jim Morrison"
     },
     "3": {
-        "a":"The Kinks",
-        "b":"The Who",
-        "c":"The Stooges"
+      "a": "The Kinks",
+      "b": "The Who",
+      "c": "The Stooges",
+      "d": "The Clash"
     },
     "4": {
-        "a":"Frank Beard",
-        "b":"Todos tenian barba",
-        "c":"Dusty Hill"
-    },
-    "5": {
-        "a":"John",
-        "b":"Paul",
-        "c":"Ringo"
+      "a": "ABBA",
+      "b": "Devo",
+      "c": "Kiss",
+      "d": "AC/DC"
     }
-},
-{
+  },
+  {
     "1": "The Dark Side Of The Moon",
-    "2": "Dientes extra",
+    "2": "Little Richard",
     "3": "The Stooges",
-    "4": "Frank Beard",
-    "5": "Paul"
-}]
+    "4": "ABBA"
+  },
+  {
+    "1": {
+      "a": "assets/questions/abbeyroad.jpg",
+      "b": "assets/questions/dark-side.jpg",
+      "c": "assets/questions/housesoftheholy.jpeg",
+      "d": "assets/questions/exileonmainst.jpg"
+    },
+    "2": {
+      "a": "assets/questions/mick-jagger-1.jpg",
+      "b": "assets/questions/chuckberry.jpeg",
+      "c": "assets/questions/littlerichard.jpg",
+      "d": "assets/questions/jim-morrison.jpg"
+    },
+    "3": {
+      "a": "assets/questions/thekinks.jpg",
+      "b": "assets/questions/thewho.jpg",
+      "c": "assets/questions/thestooges.jpg",
+      "d": "assets/questions/theclash.jpg"
+    },
+    "4": {
+      "a": "assets/questions/abba.jpg",
+      "b": "assets/questions/devo.jpg",
+      "c": "assets/questions/kiss.jpg",
+      "d": "assets/questions/acdc.jpg"
+    }
+  }
+]

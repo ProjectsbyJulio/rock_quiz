@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:rock_quiz/quizPage.dart';
+import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
 class HomePage extends StatefulWidget {
   @override
@@ -26,23 +27,21 @@ class _HomePageState extends State<HomePage> {
                 children: <Widget>[
                   Padding(
                     padding: EdgeInsets.symmetric(
-                      vertical:40.0,
+                      vertical: 40.0,
                     ),
                     child: Material(
-                      elevation: 5.0,
-                      borderRadius: BorderRadius.circular(100.0),
+                      color: Colors.blueGrey[800],
                       child: Container(
                         // changing from 200 to 150 as to look better
                         height: 150.0,
                         width: 150.0,
-                        child: ClipOval(
-                          child: Image(
-                            fit: BoxFit.cover,
-                            image: AssetImage(
-                              "assets/img/quiz.png",
-                            ),
-                          ),
+                        child: FaIcon(
+                          FontAwesomeIcons.gamepad,
+                          color: Colors.white,
+                          size: 90,
                         ),
+                        color: Colors.blueGrey[800],
+                        alignment: Alignment.center,
                       ),
                     ),
                   ),
@@ -77,7 +76,6 @@ class _HomePageState extends State<HomePage> {
 
   @override
   Widget build(BuildContext context) {
-
     return Scaffold(
       body: ListView(
         children: <Widget>[card()],

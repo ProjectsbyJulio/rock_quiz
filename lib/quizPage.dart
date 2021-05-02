@@ -1,13 +1,16 @@
 import 'dart:async';
 import 'dart:convert';
 import 'dart:math';
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:rock_quiz/resultPage.dart';
 
 class GetJson extends StatelessWidget {
   GetJson();
+
   String assetToLoad;
+
   setAsset() {
     assetToLoad = "assets/questions.json";
   }
@@ -35,13 +38,16 @@ class GetJson extends StatelessWidget {
 
 class QuizPage extends StatefulWidget {
   final List myData;
+
   QuizPage({Key key, @required this.myData}) : super(key: key);
+
   @override
   _QuizPageState createState() => _QuizPageState(myData);
 }
 
 class _QuizPageState extends State<QuizPage> {
   final List myData;
+
   _QuizPageState(this.myData);
 
   Color colorToShow = Colors.blueGrey[800];
@@ -58,7 +64,8 @@ class _QuizPageState extends State<QuizPage> {
   Map<String, Color> btnColor = {
     "a": Colors.blueGrey[800],
     "b": Colors.blueGrey[800],
-    "c": Colors.blueGrey[800]
+    "c": Colors.blueGrey[800],
+    "d": Colors.blueGrey[900]
   };
 
   bool cancelTimer = false;
@@ -67,9 +74,9 @@ class _QuizPageState extends State<QuizPage> {
     var distinctIds = [];
     var rand = new Random();
     for (int i = 0;;) {
-      distinctIds.add(1 + rand.nextInt(5));
+      distinctIds.add(1 + rand.nextInt(4));
       randomArray = distinctIds.toSet().toList();
-      if (randomArray.length < 5) {
+      if (randomArray.length < 4) {
         continue;
       } else {
         break;
@@ -84,7 +91,7 @@ class _QuizPageState extends State<QuizPage> {
     genRandomArray();
     super.initState();
   }
-  
+
   @override
   void setState(fn) {
     if (mounted) {
@@ -113,7 +120,7 @@ class _QuizPageState extends State<QuizPage> {
     cancelTimer = false;
     timer = 15;
     setState(() {
-      if (j < 5) {
+      if (j < 4) {
         i = randomArray[j];
         j++;
       } else {
@@ -124,6 +131,7 @@ class _QuizPageState extends State<QuizPage> {
       btnColor["a"] = Colors.blueGrey[800];
       btnColor["b"] = Colors.blueGrey[800];
       btnColor["c"] = Colors.blueGrey[800];
+      btnColor["d"] = Colors.blueGrey[800];
       disableAnswer = false;
     });
     startTimer();
@@ -152,20 +160,15 @@ class _QuizPageState extends State<QuizPage> {
       ),
       child: MaterialButton(
         onPressed: () => checkAnswer(k),
-        child: Text(
-          myData[1][i.toString()][k],
-          style: TextStyle(
-            color: Colors.white,
-            fontFamily: "Poppins300",
-            fontSize: 16.0,
-          ),
-          maxLines: 1,
+        child: Image.asset(
+          myData[3][i.toString()][k],
+          height: 107,
         ),
         color: btnColor[k],
         splashColor: Colors.blueGrey[700],
         highlightColor: Colors.blueGrey[700],
-        minWidth: 500.0,
-        height: 45.0,
+        minWidth: 120.0,
+        height: 105.0,
         shape:
             RoundedRectangleBorder(borderRadius: BorderRadius.circular(10.0)),
       ),
@@ -202,50 +205,60 @@ class _QuizPageState extends State<QuizPage> {
         body: Column(
           children: <Widget>[
             Expanded(
-              flex: 4,
+              flex: 3,
               child: Container(
-                margin: EdgeInsets.only(top:80),
+                margin: EdgeInsets.only(top: 80),
                 padding: EdgeInsets.all(15.0),
                 alignment: Alignment.bottomLeft,
                 child: Text(
                   myData[0][i.toString()],
                   textAlign: TextAlign.center,
                   style: TextStyle(
-                    fontSize: 28.0,
-                    fontFamily: "Poppins300",
-                    color: Colors.white
-                  ),
+                      fontSize: 22.0,
+                      fontFamily: "Poppins300",
+                      color: Colors.white),
                 ),
               ),
             ),
             Expanded(
-              flex: 4,
+              flex: 5,
               child: AbsorbPointer(
                 absorbing: disableAnswer,
                 child: Container(
-                  child: Column(
-                    mainAxisAlignment: MainAxisAlignment.end,
-                    children: <Widget>[
-                      choiceButton('a'),
-                      choiceButton('b'),
-                      choiceButton('c'),
+                  child: Row(
+                    children: [
+                      Column(
+                        children: <Widget>[
+                          choiceButton('a'),
+                          choiceButton('b')
+                        ],
+                        mainAxisAlignment: MainAxisAlignment.center,
+                        crossAxisAlignment: CrossAxisAlignment.center,
+                      ),
+                      Column(
+                        children: <Widget>[
+                          choiceButton('c'),
+                          choiceButton('d')
+                        ],
+                        mainAxisAlignment: MainAxisAlignment.center,
+                        crossAxisAlignment: CrossAxisAlignment.center,
+                      ),
                     ],
                   ),
                 ),
               ),
             ),
             Expanded(
-              flex: 2,
+              flex: 1,
               child: Container(
                 alignment: Alignment.topCenter,
                 child: Center(
                   child: Text(
                     showTimer,
                     style: TextStyle(
-                      fontSize: 25.0,
-                      fontFamily: 'Poppins300',
-                      color: Colors.white
-                    ),
+                        fontSize: 25.0,
+                        fontFamily: 'Poppins300',
+                        color: Colors.white),
                   ),
                 ),
               ),
